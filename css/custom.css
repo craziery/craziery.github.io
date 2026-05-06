@@ -1,3 +1,8 @@
 .avatar-img img:hover {
   transform: none !important;
 }
+.card-announcement .item-headline i {
+  color: inherit !important;   /* 或者写你想要的颜色，如 #666 */
+  animation: none !important;
+  transform: none !important;
+}
