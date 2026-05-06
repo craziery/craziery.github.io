@@ -18,4 +18,12 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2026/05/06/css/custom/</url>
+    <content><![CDATA[.avatar-img img:hover {
+  transform: none !important;
+}
+/* 让头像不旋转  */]]></content>
+  </entry>
 </search>
