@@ -6,3 +6,12 @@
   animation: none !important;
   transform: none !important;
 }
+
+/* 标签/分类卡片圆角和阴影 */
+#tag, #category {
+  border-radius: 16px;
+}
+#tag .card-tag-cloud a, #category .category-list a {
+  border-radius: 999px;
+  padding: 6px 12px;
+}
