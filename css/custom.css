@@ -7,11 +7,95 @@
   transform: none !important;
 }
 
-/* 标签/分类卡片圆角和阴影 */
-#tag, #category {
-  border-radius: 16px;
+/* Glassmorphism for tags/categories pages */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.22);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 10px 30px rgba(31, 38, 135, 0.18);
+  --glass-text: #1f2937;
+  --glass-pill-bg: rgba(255, 255, 255, 0.38);
+  --glass-pill-hover: rgba(255, 255, 255, 0.55);
 }
-#tag .card-tag-cloud a, #category .category-list a {
+
+[data-theme="dark"] {
+  --glass-bg: rgba(20, 24, 35, 0.38);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  --glass-text: #e5e7eb;
+  --glass-pill-bg: rgba(255, 255, 255, 0.08);
+  --glass-pill-hover: rgba(255, 255, 255, 0.16);
+}
+
+/* 主内容卡片玻璃感 */
+.layout > div:first-child:not(.recent-posts),
+.layout_post > #page,
+.layout > #page,
+#archive,
+#tag,
+#category {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px !important;
+  box-shadow: var(--glass-shadow);
+}
+
+/* 标签云胶囊 */
+#tag .tag-cloud-list a {
+  display: inline-block;
+  margin: 6px 8px;
+  padding: 7px 14px;
   border-radius: 999px;
-  padding: 6px 12px;
+  background: var(--glass-pill-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--glass-text) !important;
+  transition: all 0.25s ease;
+}
+
+#tag .tag-cloud-list a:hover {
+  transform: translateY(-2px);
+  background: var(--glass-pill-hover);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 分类列表玻璃卡片 */
+#category .category-list > .category-list-item {
+  margin: 10px 0;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: var(--glass-pill-bg);
+  border: 1px solid var(--glass-border);
+  transition: all 0.25s ease;
+}
+
+#category .category-list > .category-list-item:hover {
+  transform: translateX(4px);
+  background: var(--glass-pill-hover);
+}
+
+/* 标题和文字 */
+#tag, #category {
+  color: var(--glass-text);
+}
+#tag .page-title, #category .page-title {
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .layout > div:first-child:not(.recent-posts),
+  .layout_post > #page,
+  .layout > #page,
+  #archive,
+  #tag,
+  #category {
+    border-radius: 14px !important;
+  }
+
+  #tag .tag-cloud-list a {
+    margin: 5px 6px;
+    padding: 6px 12px;
+  }
 }
