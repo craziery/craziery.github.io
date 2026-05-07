@@ -193,8 +193,16 @@
 .aplayer .aplayer-thumb {
   background: #00d4ff !important;
 }
+/* Global mini player: stable position and layer */
 .aplayer.aplayer-fixed {
+  position: fixed !important;
   right: 20px !important;
   left: auto !important;
   bottom: 20px !important;
+  z-index: 99999 !important;
+  max-width: 360px;
+}
+
+.aplayer.aplayer-fixed .aplayer-body {
+  width: 320px;
 }
