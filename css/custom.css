@@ -99,3 +99,89 @@
     padding: 6px 12px;
   }
 }
+/* ===== Calm Premium Card System ===== */
+:root {
+  --bg-main: #1f252b;
+  --bg-soft: #2a323a;
+  --card-bg: rgba(37, 45, 53, 0.78);
+  --card-border: rgba(172, 186, 201, 0.18);
+  --card-shadow: 0 12px 32px rgba(10, 14, 18, 0.38);
+  --card-shadow-hover: 0 18px 42px rgba(10, 14, 18, 0.5);
+  --text-main: #d7dee7;
+  --text-sub: #9da9b7;
+  --accent: #7ea2b8; /* 沉稳蓝灰 */
+  --accent-2: #7b8f7b; /* 灰橄榄 */
+}
+
+/* 全局背景层次 */
+body {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(126, 162, 184, 0.10), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(123, 143, 123, 0.09), transparent 42%),
+    linear-gradient(145deg, #1d2329, #262f37 55%, #202830);
+  color: var(--text-main);
+}
+
+/* 主要卡片 */
+.card-widget,
+#recent-posts > .recent-post-item,
+.layout > #page,
+.layout_post > #post,
+.layout_post > #page,
+#archive,
+#tag,
+#category {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--card-shadow) !important;
+  backdrop-filter: blur(10px) saturate(115%);
+  -webkit-backdrop-filter: blur(10px) saturate(115%);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* 悬停质感 */
+.card-widget:hover,
+#recent-posts > .recent-post-item:hover,
+.layout > #page:hover,
+.layout_post > #post:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover) !important;
+  border-color: rgba(126, 162, 184, 0.35) !important;
+}
+
+/* 标题与辅助文本 */
+h1, h2, h3, h4, h5 {
+  color: #e6edf5 !important;
+}
+#aside-content .card-info .card-info-data,
+#aside-content .card-widget,
+#article-container,
+#post {
+  color: var(--text-main);
+}
+#aside-content .card-info .headline,
+#aside-content .card-announcement .announcement_content,
+.post-meta,
+.article-meta-wrap {
+  color: var(--text-sub) !important;
+}
+
+/* 链接与按钮强调色 */
+a, #article-container a {
+  color: var(--accent);
+}
+a:hover, #article-container a:hover {
+  color: #9fb9c8;
+}
+
+/* 标签胶囊 */
+#tag .tag-cloud-list a {
+  background: rgba(126, 162, 184, 0.12);
+  border: 1px solid rgba(126, 162, 184, 0.28);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+#tag .tag-cloud-list a:hover {
+  background: rgba(126, 162, 184, 0.22);
+}
