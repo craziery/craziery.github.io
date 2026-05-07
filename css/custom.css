@@ -99,3 +99,96 @@
     padding: 6px 12px;
   }
 }
+/* ===== APlayer Glass Style ===== */
+:root {
+  --ap-bg: rgba(255, 255, 255, 0.72);
+  --ap-border: rgba(255, 255, 255, 0.45);
+  --ap-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+  --ap-text: #1f2937;
+  --ap-sub: #6b7280;
+  --ap-accent: #66a6ff;
+}
+
+[data-theme="dark"] {
+  --ap-bg: rgba(17, 24, 39, 0.68);
+  --ap-border: rgba(255, 255, 255, 0.12);
+  --ap-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+  --ap-text: #e5e7eb;
+  --ap-sub: #9ca3af;
+  --ap-accent: #66a6ff;
+}
+
+/* 大播放器 */
+#article-container .aplayer {
+  background: var(--ap-bg) !important;
+  backdrop-filter: blur(16px) saturate(130%);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  border: 1px solid var(--ap-border);
+  border-radius: 18px !important;
+  box-shadow: var(--ap-shadow) !important;
+  overflow: hidden;
+}
+
+#article-container .aplayer .aplayer-info {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+#article-container .aplayer .aplayer-title,
+#article-container .aplayer .aplayer-author {
+  color: var(--ap-text) !important;
+}
+
+#article-container .aplayer .aplayer-author {
+  opacity: 0.75;
+}
+
+#article-container .aplayer .aplayer-list ol li {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: var(--ap-text) !important;
+}
+
+#article-container .aplayer .aplayer-list ol li:hover {
+  background: rgba(102, 166, 255, 0.12) !important;
+}
+
+#article-container .aplayer .aplayer-list ol li.aplayer-list-light {
+  background: rgba(102, 166, 255, 0.2) !important;
+}
+
+/* 进度条颜色 */
+.aplayer .aplayer-played {
+  background: var(--ap-accent) !important;
+}
+.aplayer .aplayer-thumb {
+  background: var(--ap-accent) !important;
+}
+
+/* 全局小播放器（固定角落） */
+.aplayer.aplayer-fixed {
+  max-width: 360px;
+  border-radius: 14px !important;
+  overflow: hidden;
+  box-shadow: var(--ap-shadow) !important;
+  border: 1px solid var(--ap-border);
+}
+
+.aplayer.aplayer-fixed .aplayer-body {
+  background: var(--ap-bg) !important;
+  backdrop-filter: blur(14px) saturate(125%);
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
+}
+
+.aplayer.aplayer-fixed .aplayer-info .aplayer-music .aplayer-title {
+  color: var(--ap-text) !important;
+}
+
+/* 手机端 */
+@media (max-width: 768px) {
+  .aplayer.aplayer-fixed {
+    max-width: calc(100vw - 24px);
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    margin: 0 !important;
+  }
+}
