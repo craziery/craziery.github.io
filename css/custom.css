@@ -193,16 +193,23 @@
 .aplayer .aplayer-thumb {
   background: #00d4ff !important;
 }
-/* Global mini player: stable position and layer */
+/* 强制让 mini 固定播放器可见 */
 .aplayer.aplayer-fixed {
   position: fixed !important;
   right: 20px !important;
   left: auto !important;
   bottom: 20px !important;
-  z-index: 99999 !important;
-  max-width: 360px;
+  z-index: 999999 !important;
+  max-width: none !important;
+  width: 320px !important;
 }
 
 .aplayer.aplayer-fixed .aplayer-body {
-  width: 320px;
+  left: 0 !important;
+  width: 320px !important;
+}
+
+/* mini 模式下标题和控制区可见 */
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  width: 320px !important;
 }
