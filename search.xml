@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>try</title>
+    <url>/2026/05/07/try/</url>
+    <content><![CDATA[<p>1</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Redis</tag>
+        <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>javaWeb学习-01</title>
     <url>/2026/05/08/javaweb%E5%AD%A6%E4%B9%A0-01/</url>
     <content><![CDATA[<h1 id="javaWeb学习第一天"><a href="#javaWeb学习第一天" class="headerlink" title="javaWeb学习第一天"></a>javaWeb学习第一天</h1><h2 id="一、-学习路径"><a href="#一、-学习路径" class="headerlink" title="一、 学习路径"></a>一、 学习路径</h2><h3 id="part1：前端Web基础"><a href="#part1：前端Web基础" class="headerlink" title="part1：前端Web基础"></a>part1：前端Web基础</h3><ul>
@@ -153,7 +167,7 @@
 </li>
 <li>盒子模型<ul>
 <li>标签都可以看作一个盒子，把页面中的元素包含在一个矩形区域里</li>
-<li>组成：内容区域、内边距区、边框区、外边距区</li>
+<li>组成：内容区域(content)、内边距区(padding)、边框区(border)、外边距区(margin)</li>
 <li>使用div和span<ul>
 <li>div<ul>
 <li>一行只显示一个</li>
@@ -180,20 +194,6 @@
       <tags>
         <tag>Java</tag>
         <tag>JavaWeb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>try</title>
-    <url>/2026/05/07/try/</url>
-    <content><![CDATA[<p>1</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Redis</tag>
-        <tag>后端</tag>
       </tags>
   </entry>
 </search>
