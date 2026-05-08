@@ -1,6 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>javaWeb学习-01</title>
+    <url>/2026/05/08/javaweb%E5%AD%A6%E4%B9%A0-01/</url>
+    <content><![CDATA[<h1 id="javaWeb学习第一天"><a href="#javaWeb学习第一天" class="headerlink" title="javaWeb学习第一天"></a>javaWeb学习第一天</h1><h2 id="一、-学习路径"><a href="#一、-学习路径" class="headerlink" title="一、 学习路径"></a>一、 学习路径</h2><h3 id="part1：前端Web基础"><a href="#part1：前端Web基础" class="headerlink" title="part1：前端Web基础"></a>part1：前端Web基础</h3><ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+<li>Ajax</li>
+<li>Vue3</li>
+</ul>
+<h3 id="part2：后端Web基础"><a href="#part2：后端Web基础" class="headerlink" title="part2：后端Web基础"></a>part2：后端Web基础</h3><ul>
+<li>Maven、HTTP</li>
+<li>IOC、DI</li>
+<li>MySQL</li>
+<li>JDBC、Mybatis</li>
+</ul>
+<h3 id="part3：后端Web实战"><a href="#part3：后端Web实战" class="headerlink" title="part3：后端Web实战"></a>part3：后端Web实战</h3><ul>
+<li>部门管理</li>
+<li>员工管理</li>
+<li>班级管理</li>
+<li>学员管理</li>
+<li>报表统计</li>
+<li>登录认证</li>
+</ul>
+<h3 id="part4：后端Web进阶"><a href="#part4：后端Web进阶" class="headerlink" title="part4：后端Web进阶"></a>part4：后端Web进阶</h3><ul>
+<li>AOP</li>
+<li>SpringBoot原理</li>
+<li>自定义Starter</li>
+<li>Maven高级</li>
+</ul>
+<h3 id="part5：前端Web实战"><a href="#part5：前端Web实战" class="headerlink" title="part5：前端Web实战"></a>part5：前端Web实战</h3><ul>
+<li>Vue工程化</li>
+<li>ElementPlus</li>
+<li>Tlias案例</li>
+</ul>
+<h3 id="part6：部署"><a href="#part6：部署" class="headerlink" title="part6：部署"></a>part6：部署</h3><ul>
+<li>Linux</li>
+<li>Docker</li>
+</ul>
+<hr>
+<h3 id="Web前端开发"><a href="#Web前端开发" class="headerlink" title="Web前端开发"></a>Web前端开发</h3><p><strong>初识Web</strong> </p>
+<ul>
+<li>网页由哪几部分组成：<ul>
+<li>文字、图片、视频、音频、超链接</li>
+</ul>
+</li>
+<li>网页的本质：前端代码</li>
+<li>代码如何转换成网页：<ul>
+<li>浏览器对代码进行解析渲染的部分，称为浏览器内核</li>
+</ul>
+</li>
+</ul>
+<p><strong>Web标准</strong> </p>
+<ul>
+<li>三部分：<ul>
+<li>HTML:负责网页的结构（页面元素和内容）</li>
+<li>网页的表现（页面的表现，位置）</li>
+<li>JavaScript：网页的行为（交互效果）</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML+CSS"></a>HTML+CSS</h3><p><strong>什么是HTML</strong></p>
+<p>HTML:超文本标记语言</p>
+<ul>
+<li>超文本：超越文本的限制，比文本更强大，可以自定义图片、音频、视频</li>
+<li>标记语言：由标签“&lt;标签名&gt;”构成的语言<ul>
+<li>HTML的标签都是预定义好的<h1>展示标题，<img>展示图片，<video>展示视频</li>
+<li>HTML代码可以直接在浏览器中运行，HTML的标签由浏览器解析</li>
+</ul>
+</li>
+</ul>
+ <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>HTML入门程序<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;img/1.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>什么是CSS</strong></p>
+<p>CSS：层叠样式表，用于控制页面的样式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">h1</span> style=&quot;<span class="attribute">color</span>:red;&quot;&gt;<span class="selector-tag">HTML</span>入门程序&lt;/<span class="selector-tag">h1</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">img</span> <span class="attribute">src</span>=&quot;<span class="selector-tag">img</span>/<span class="number">1</span><span class="selector-class">.png</span>&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>HTML快速入门</strong> </p>
+<ol>
+<li>新建文本文件，后缀名为.html</li>
+<li>编写HTML的基本框架，定义标题</li>
+<li>在<body> 中填写内容<ul>
+<li>head：用来存放给浏览器看的信息，比如CSS样式</li>
+<li>body：用来存放给用户看的信息，如文字、图片、视频</li>
+<li>标签不区分大小写</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>HTML快速入门<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello HTML<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/img&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>前端开发工具</strong> </p>
+<p>用vscode，加上一些插件</p>
+<p><strong>常见标签&amp;样式</strong></p>
+<ul>
+<li>html页面在渲染展示的时候，是从上往下逐行解析展示的，也就需要从上往下写</li>
+<li>标题标签<h1> - <h6></li>
+<li>超链接： <a href=" " target=" ">超链接标题</a>&gt;（href输入url，target是打开窗口模式）</li>
+<li>CSS的引入方式：<ul>
+<li>行内样式：写在标签style属性中（配合JavaScript）</li>
+<li>内部样式：写在style标签中（一般写在head里）</li>
+<li>外部样式：写在.css文件中</li>
+</ul>
+</li>
+<li>颜色表示形式：rgb表示法（控制red，green，blue的占比，0-255）<ul>
+<li>十六进制表示法（将rgb转化成16进制数，在前面加一个#）</li>
+<li>rgba表示法即rgb添加一个透明度程度</li>
+</ul>
+</li>
+<li>CSS选择器<ul>
+<li>元素选择器 标签名{} </li>
+<li>类选择器  .class属性值</li>
+<li>id选择器  #id属性值</li>
+<li>id&gt;类选择器&gt;元素选择器</li>
+<li>分组选择器 选择器1，选择器2</li>
+<li>属性选择器 </li>
+<li>后代选择器 父元素 子元素 选择父元素内所有子元素标签</li>
+</ul>
+</li>
+<li>标签<ul>
+<li>video</li>
+<li>img</li>
+<li>p：段落标签</li>
+<li>b&#x2F;strong（strong带有强调语义）：加粗(下面右边都是强调语义)</li>
+<li>u &#x2F;ins：下划线</li>
+<li>i&#x2F;em：倾斜</li>
+<li>s&#x2F;del：删除线</li>
+<li>&amp;nbsp是空格</li>
+<li>&amp;lt：小于号</li>
+<li>&amp;gt：大于号</li>
+<li>资源路径<ul>
+<li>绝对路径<ul>
+<li>绝对磁盘路径</li>
+<li>绝对网络路径</li>
+</ul>
+</li>
+<li>相对路径<ul>
+<li>.&#x2F; 相对当前目录路径</li>
+<li>..&#x2F;相对上一级目录路径</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>px是像素点单位，1px表示一个像素</li>
+</ul>
+</li>
+<li>盒子模型<ul>
+<li>标签都可以看作一个盒子，把页面中的元素包含在一个矩形区域里</li>
+<li>组成：内容区域、内边距区、边框区、外边距区</li>
+<li>使用div和span<ul>
+<li>div<ul>
+<li>一行只显示一个</li>
+<li>宽度默认父元素宽度</li>
+<li>可以设置宽高</li>
+</ul>
+</li>
+<li>span<ul>
+<li>一行可以显示多个</li>
+<li>宽度和高度默认由内容撑开</li>
+<li>不可以设置宽高</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="C:\Users\31176\Documents\Sisyphus_blog\source_posts\javaweb学习-01\box.png" alt="box"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JavaWeb</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>try</title>
     <url>/2026/05/07/try/</url>
     <content><![CDATA[<p>1</p>
@@ -12,18 +194,6 @@
         <tag>Java</tag>
         <tag>Redis</tag>
         <tag>后端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>javaWeb学习-01</title>
-    <url>/2026/05/08/javaweb%E5%AD%A6%E4%B9%A0-01/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>JavaWeb</tag>
       </tags>
   </entry>
 </search>
